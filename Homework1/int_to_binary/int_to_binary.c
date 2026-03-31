@@ -1,7 +1,7 @@
 #include "int_to_binary.h"
 #include <stdio.h>
 
-//В мене не працює %b, хоча використовую С23, тому брав функції з інтернету
+//%b doesn't work for me, although I use C23, so I took functions from the Internet
 
 void print_binary16(const int16_t n) {
     const int bits = 16;
