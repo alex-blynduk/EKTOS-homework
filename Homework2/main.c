@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-bool unreachableFunction() {
+static bool unreachableFunction() {
     printf("This text will not be displayed\n");
     return true;
 }
@@ -22,7 +22,7 @@ int main(void) {
     }
 
     int num = 4;
-    num = num && ~(1 << 2); //we wanted to reset 2nd bit, but used wrong operator instead
+    num = num && ~(1 << 2); //we wanted to reset 3rd bit, but used wrong operator instead
     if (num) {
         printf("This text should not be displayed, but it will be because of the usage of wrong operator");
     }
