@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-static bool unreachableFunction() {
+static bool unreachableFunction(void) {
     printf("This text will not be displayed\n");
     return true;
 }
