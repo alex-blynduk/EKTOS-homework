@@ -20,28 +20,27 @@ int main(void) {
     {
         const int x = 3;
         printf("x = %d\n", x);
+
+        switch (x) {
+            case 1: {
+                printf("x value is kept from main function scope\n");
+                break;
+            }
+            case 2 : {
+                printf("x value is kept from block 1\n");
+                break;
+            }
+            case 3 : {
+                printf("x value is kept from block 2 because of shadowing\n");
+                break;
+            }
+            default: {
+                printf("char is unknown");
+                break;
+            }
+        }
     }
     printf("x = %d\n", x);
-
-    char c = 'b';
-    switch (c) {
-        case 'a': {
-            printf("char is a");
-            break;
-        }
-        case 'b' : {
-            printf("char is b");
-            break;
-        }
-        case 'c' : {
-            printf("char is c");
-            break;
-        }
-        default: {
-            printf("char is unknown");
-            break;
-        }
-    }
 
     //============TASK2===============
     const int local_var = 1; //this variable is only visible inside this function;
